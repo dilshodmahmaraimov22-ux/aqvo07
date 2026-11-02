@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,10 +19,8 @@ const Header = () => {
         </button>
 
         <nav className={`header__nav ${menuOpen ? "header__nav--open" : ""}`}>
-          
-          <a href="#about" className="header__link" onClick={() => setMenuOpen(false)}>
-            Biz haqimizda
-          </a>
+          <Link className="header__link" to="/">Bosh sahifa</Link>
+          <Link className="header__link" to="/about">Biz haqimizda</Link>
         </nav>
 
         <a href="/" className="header__logo">
