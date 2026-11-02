@@ -1,20 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap");
 
 .marquee {
   background-color: #8b2622;
   overflow: hidden;
-  padding: 30px 0;
+  padding: 40px 0;
   font-family: "Oswald", "Bebas Neue", sans-serif;
 }
 
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 30s linear infinite;
-}
-
-.marquee:hover .marquee__track {
-  animation-play-state: paused;
+  animation: marquee-scroll 40s linear infinite;
 }
 
 .marquee__group {
@@ -22,10 +18,10 @@
   flex-shrink: 0;
 }
 
-.marquee__item {
+.marquee__text {
   color: #fff;
   font-size: 110px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
@@ -41,8 +37,14 @@
   }
 }
 
+/* Sichqoncha ustiga kelganda to'xtatish (xohlasangiz o'chirib tashlang) */
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 1100px) {
-  .marquee__item {
+  .marquee__text {
     font-size: 80px;
     padding-right: 40px;
   }
@@ -50,19 +52,22 @@
 
 @media (max-width: 768px) {
   .marquee {
-    padding: 20px 0;
+    padding: 26px 0;
   }
-  .marquee__item {
+  .marquee__text {
     font-size: 52px;
     padding-right: 30px;
   }
   .marquee__track {
-    animation-duration: 22s;
+    animation-duration: 30s;
   }
 }
 
 @media (max-width: 480px) {
-  .marquee__item {
+  .marquee {
+    padding: 18px 0;
+  }
+  .marquee__text {
     font-size: 36px;
     padding-right: 20px;
   }
@@ -70,6 +75,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .marquee__track {
-    animation-duration: 90s;
+    animation-duration: 120s;
   }
 }

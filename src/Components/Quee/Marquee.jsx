@@ -6,10 +6,10 @@ const Marquee = () => {
   return (
     <section className="marquee">
       <div className="marquee__track">
-        {[...Array(2)].map((_, i) => (
-          <div className="marquee__group" key={i} aria-hidden={i === 1}>
-            {[...Array(4)].map((_, j) => (
-              <span className="marquee__item" key={j}>
+        {[...Array(2)].map((_, groupIndex) => (
+          <div className="marquee__group" key={groupIndex} aria-hidden={groupIndex === 1}>
+            {[...Array(4)].map((_, i) => (
+              <span className="marquee__text" key={i}>
                 {text}
               </span>
             ))}
