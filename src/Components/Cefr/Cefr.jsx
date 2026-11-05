@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Cefr.css";
-import bg from "../../assets/cefr-bg.jpg";
-import cert1 from "../../assets/cert-1.jpg";
-import cert2 from "../../assets/cert-2.jpg";
-import cert3 from "../../assets/cert-3.jpg";
-import cert4 from "../../assets/cert-4.jpg";
+import bg from "../Images/cgb.jpg";
+import cert1 from "../Images/cfr1.png";
+import cert2 from "../Images/cfr2.png";
+import cert3 from "../Images/cfr3.png";
+import cert4 from "../Images/cfr4.png";
 
 const certificates = [cert1, cert2, cert3, cert4];
 
