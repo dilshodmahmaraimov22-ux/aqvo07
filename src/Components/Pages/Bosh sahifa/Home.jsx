@@ -4,6 +4,7 @@ import Hero from '../../Hero/Hero'
 import Banner from '../../Banner/Banner'
 import Nav from '../../Nav/Nav'
 import Reg from '../../Reg/Reg'
+import Cefr from '../../Cefr/Cefr'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
     <Banner/>
     <Nav/>
     <Reg/>
+    <Cefr/>
     </>
   )
 }
