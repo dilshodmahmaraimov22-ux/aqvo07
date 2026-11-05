@@ -1,4 +1,5 @@
 import "./Hero.css";
+import banner from '../Images/hero_item.jpg'
 
 const Hero = () => {
   return (
@@ -12,13 +13,13 @@ const Hero = () => {
           </p>
 
           <div className="hero__logo">
-            {/* <img src={logoCircle} alt="AQVO logotipi" className="hero__logo-img" /> */}
+            <img src={logoCircle} alt="AQVO logotipi" className="hero__logo-img" />
           </div>
         </div>
       </div>
 
       <div className="hero__banner">
-        {/* <img src={banner} alt="AQVO mahsulotlari" className="hero__banner-img" /> */}
+        <img src={banner} alt="AQVO mahsulotlari" className="hero__banner-img" />
       </div>
     </section>
   );
