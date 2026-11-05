@@ -1,4 +1,5 @@
 import "./Hero.css";
+import logoCircle from '../Images/logo.png'
 import banner from '../Images/hero_item.jpg'
 
 const Hero = () => {
