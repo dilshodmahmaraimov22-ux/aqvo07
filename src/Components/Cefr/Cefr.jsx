@@ -1,0 +1,65 @@
+import { useEffect, useState } from "react";
+import "./Cefr.css";
+import bg from "../../assets/cefr-bg.jpg";
+import cert1 from "../../assets/cert-1.jpg";
+import cert2 from "../../assets/cert-2.jpg";
+import cert3 from "../../assets/cert-3.jpg";
+import cert4 from "../../assets/cert-4.jpg";
+
+const certificates = [cert1, cert2, cert3, cert4];
+
+const Cefr = () => {
+  const [selected, setSelected] = useState(null);
+
+  // Esc bosilganda modalni yopish
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  return (
+    <section className="cefr" style={{ backgroundImage: `url(${bg})` }}>
+      <div className="cefr__overlay"></div>
+
+      <div className="cefr__container">
+        <h2 className="cefr__title">BIZNING SERTIFIKATLARIMIZ</h2>
+
+        <div className="cefr__list">
+          {certificates.map((src, index) => (
+            <button
+              key={index}
+              className="cefr__item"
+              onClick={() => setSelected(src)}
+              aria-label={`${index + 1}-sertifikatni kattalashtirish`}
+            >
+              <img src={src} alt={`Sertifikat ${index + 1}`} className="cefr__img" />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {selected && (
+        <div className="cefr__modal" onClick={() => setSelected(null)}>
+          <button
+            className="cefr__close"
+            onClick={() => setSelected(null)}
+            aria-label="Yopish"
+          >
+            ✕
+          </button>
+          <img
+            src={selected}
+            alt="Sertifikat"
+            className="cefr__modal-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default Cefr;
