@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Reg.css";
-import bg from "../../assets/reg-bg.jpg";
+import bg from "../Images/rgb.jpg";
 
 const initialForm = {
   name: "",
