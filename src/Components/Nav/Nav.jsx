@@ -2,7 +2,6 @@ import "./Nav.css";
 import logo from "../Images/logo.png";
 
 
-// Rasmlarni public/nav/ papkasiga top-1.jpg ... top-6.jpg va bottom-1.jpg ... bottom-9.jpg nomi bilan qo'ying
 const topImages = Array.from({ length: 6 }, (_, i) => `/nav/top-${i + 1}.jpg`);
 const bottomImages = Array.from({ length: 9 }, (_, i) => `/nav/bottom-${i + 1}.jpg`);
 
