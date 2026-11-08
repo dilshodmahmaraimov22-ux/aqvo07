@@ -8,7 +8,7 @@
 }
 
 .hero__top {
-  min-height: 20vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,6 +24,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
+  height: 25vh;
 }
 
 .hero__text {
@@ -37,13 +38,40 @@
 }
 
 .hero__logo-btn {
-  padding: 0;
-  border: none;
-  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: 50%;
   cursor: pointer;
-  line-height: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero__logo-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero__logo-btn:active {
+  transform: scale(0.96);
+}
+
+.hero__logo-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.hero__logo-img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  padding: 28px;
+  box-sizing: border-box;
+  object-fit: contain;
+  background-color: #3d0f0d;
+  border-radius: 50%;
 }
 
 .hero__logo-btn:hover {
@@ -51,9 +79,9 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* .hero__logo-btn:active {
+.hero__logo-btn:active {
   transform: scale(0.96);
-} */
+}
 
 .hero__logo-btn:focus-visible {
   outline: 3px solid #fff;
