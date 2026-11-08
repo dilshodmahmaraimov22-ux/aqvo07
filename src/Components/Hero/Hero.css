@@ -8,27 +8,11 @@
 }
 
 .hero__top {
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 0 60px;
-}
-
-.hero__title {
-  margin: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
-  font-size: clamp(60px, 14vw, 260px);
-  line-height: 1;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  text-align: center;
 }
 
 .hero__container {
@@ -52,28 +36,36 @@
   color: #fff;
 }
 
-.hero__btn {
-  padding: 18px 40px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #8b2723;
-  background-color: #fff;
-  border: 2px solid #fff;
-  border-radius: 999px;
+.hero__logo-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.25s ease, color 0.25s ease,
-    transform 0.25s ease;
+  line-height: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero__btn:hover {
-  background-color: transparent;
-  color: #fff;
-  transform: translateY(-2px);
+.hero__logo-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.hero__btn:active {
-  transform: translateY(0);
+.hero__logo-btn:active {
+  transform: scale(0.96);
+}
+
+.hero__logo-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.hero__logo-img {
+  display: block;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .hero__banner {
@@ -93,9 +85,9 @@
     max-width: 340px;
   }
 
-  .hero__btn {
-    padding: 16px 32px;
-    font-size: 16px;
+  .hero__logo-img {
+    width: 110px;
+    height: 110px;
   }
 }
 
@@ -112,11 +104,16 @@
   }
 
   .hero__container {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .hero__btn {
-    width: 100%;
+  .hero__text {
+    font-size: 14px;
+    max-width: 220px;
+  }
+
+  .hero__logo-img {
+    width: 80px;
+    height: 80px;
   }
 }

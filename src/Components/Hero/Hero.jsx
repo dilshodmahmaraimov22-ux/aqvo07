@@ -1,12 +1,16 @@
 import "./Hero.css";
+import logoCircle from "../Images/logo.png";
 import banner from "../Images/hero_item.jpg";
 
 const Hero = () => {
+  const handleLogoClick = () => {
+
+    console.log("Logo bosildi");
+  };
+
   return (
     <section className="hero">
       <div className="hero__top">
-        <h1 className="hero__title">TABIIY MAHSULOTLAR</h1>
-
         <div className="hero__container">
           <p className="hero__text">
             AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida
@@ -14,8 +18,17 @@ const Hero = () => {
             dizaynda taqdim etuvchi yetakchi brend.
           </p>
 
-          <button type="button" className="hero__btn">
-            Buyurtma berish
+          <button
+            type="button"
+            className="hero__logo-btn"
+            onClick={handleLogoClick}
+            aria-label="AQVO mahsulotlariga o'tish"
+          >
+            <img
+              src={logoCircle}
+              alt="AQVO logotipi"
+              className="hero__logo-img"
+            />
           </button>
         </div>
       </div>
