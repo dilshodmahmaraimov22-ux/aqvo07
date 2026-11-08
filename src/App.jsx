@@ -5,6 +5,7 @@ import About from './Components/Pages/Biz haqimizda/About'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
+
 const App = () => {
   return (
     <>

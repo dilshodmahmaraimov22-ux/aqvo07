@@ -1,11 +1,12 @@
 import "./Hero.css";
-import logoCircle from '../Images/logo.png'
-import banner from '../Images/hero_item.jpg'
+import banner from "../Images/hero_item.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__top">
+        <h1 className="hero__title">TABIIY MAHSULOTLAR</h1>
+
         <div className="hero__container">
           <p className="hero__text">
             AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida
@@ -13,14 +14,18 @@ const Hero = () => {
             dizaynda taqdim etuvchi yetakchi brend.
           </p>
 
-          <div className="hero__logo">
-            <img src={logoCircle} alt="AQVO logotipi" className="hero__logo-img" />
-          </div>
+          <button type="button" className="hero__btn">
+            Buyurtma berish
+          </button>
         </div>
       </div>
 
       <div className="hero__banner">
-        <img src={banner} alt="AQVO mahsulotlari" className="hero__banner-img" />
+        <img
+          src={banner}
+          alt="AQVO mahsulotlari"
+          className="hero__banner-img"
+        />
       </div>
     </section>
   );
